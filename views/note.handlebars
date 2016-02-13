@@ -1,0 +1,10 @@
+<h1>Quick Notes</h1>
+{{#each notes}}
+<pre>{{id}}. {{note}} <small>{{date}}</small></pre>
+
+{{/each}}
+
+<form action="/" method="post">
+  <textarea name="note"rows="8" cols="40"></textarea>
+  <button type="submit">Save Note!</button>
+</form>

@@ -1,0 +1,14 @@
+<h1>Wishlist</h1>
+{{#each wishes}}
+  <pre>
+    <form action="/update/{{ id }}" method="post">
+      {{id}}. <input type="text" value="{{wish}}" name="wish"> <small>{{date}}</small>
+      <a href="/delete/{{ id }}">Delete</a>
+      <button type="submit">Update</button>
+    </form>
+  </pre>
+{{/each}}
+<form action="/" method="post">
+  <textarea name="wishdata"rows="8" cols="40"></textarea>
+  <button type="submit">Save Wish!</button>
+</form>
